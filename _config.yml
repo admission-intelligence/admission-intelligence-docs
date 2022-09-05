@@ -1,0 +1,3 @@
+theme: jekyll-theme-slate
+title: IoT Population Health
+description: A serverless architecture for IoT population health using Quarkus and Kogito
