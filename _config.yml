@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
-title: IoT Population Health
-description: A serverless architecture for IoT population health using Quarkus and Kogito
+title: Admission Intelligence
+description: A data driven architecture and decision services implementation for improving preventable admission rates
+
