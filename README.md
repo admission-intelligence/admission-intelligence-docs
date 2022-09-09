@@ -73,6 +73,12 @@ the [dashboard can be viewed here](TODO - deploy the thing)
 
 #### Infrastructure, Messaging, and Standards
 
+- Kafka
+- Microservices
+- Decoupled domains
+- Kubernetes
+
+
 #### Decision Services
 
 #### Dashboards and User Experience
@@ -89,6 +95,11 @@ the [dashboard can be viewed here](TODO - deploy the thing)
 
 
 ### Future Functionality and Next Steps
+
+- Model development
+- Develop model as a service
+- Clinical feedback/partnership
+
 
 ### Running the Software
 
