@@ -55,7 +55,7 @@ the [dashboard can be viewed here](TODO - deploy the thing)
 
 The reference architecture in the submission serves as a technical roadmap to achieve the objective of reducing the rate of preventable admissions. 
 
-![Architecture](images/High_Level_Architecture.png)
+![Architecture](images/Architecture.png)
 
 The architecture has four key domains
 
