@@ -21,7 +21,7 @@ problem disproportionately impacts disadvantaged communities and individuals, es
 A one size fits all approach won't work. The scope of the challenge means improving preventable admission rates requires a data driven architecture
 that can operate at scale and bring the best decision making and automation tools available to life. 
 
-Under the following guiding architectural requirements:
+Under the following guiding requirements:
 
 * __Targeted Care__
     * Enhance and empower the experts. Enable clinicians and subject matter experts to target care and attention to the patients most at risk of admission
@@ -53,30 +53,48 @@ the [dashboard can be viewed here](TODO - deploy the thing)
 
 ### Reference Architecture
 
-<!---
-![Architecture](images/Architecture.png)
--->
+The reference architecture in the submission serves as a technical roadmap to achieve the objective of reducing the rate of preventable admissions. 
+
+![Architecture](images/High_Level_Architecture.png)
+
+The architecture has four key domains
+
+- __Data Management__
+    - Responsible for ingestion of data sources to drive model and decision services
+    - Expose APIs and data processing capabiltiy for relevant healthcare data including
+        - Claims and remittance (837/835 edi)
+        - Eligibility data (270/271 edi)
+        - EMR data via HL7
+        
+- __Models as Service__
+    - A principle challenge with modern model development is turning the outputs of the models into actionable outcomes. The model as a service element of the architecture provides
+    the rest of the architecture a standardized view of model inputs and outputs. The outputs 
+- __Decision Services__
+- __Communication Services__
+
 
 #### Model as a Service
 
 - standardization
 - feature store
 
-#### Identity and Security
-
-- okta
-- keycloak
-
-
 #### Data Lake
 
+The data lake in the architecture provides storage for both structured and unstructured data. 
 
 #### Infrastructure, Messaging, and Standards
 
+The gray boxes in the architecture diagram above are intended to be microservices
+
+- Kafka as a messaging tier
+    - Interaction between domains must be event driven and be as decoupled as possible. The four domains will 
+- Kubernetes
+    The services will be deployed to a Kubernetes cluster to support automated scaling and operation at the scale required to process the multitude of data sources needed to drive the models and business rules
+    
 - Kafka
 - Microservices
 - Decoupled domains
-- Kubernetes
+
 
 
 #### Decision Services
@@ -85,11 +103,54 @@ the [dashboard can be viewed here](TODO - deploy the thing)
 
 ### Technology Survey
 
+#### Data Management
+ - (Datavant Switchboard)[https://datavant.com/product/]
+ - (AWS Comprehend Medical)[https://aws.amazon.com/comprehend/medical/]
+    - Note: Comprehend is focused on NLP for unstructured medical data and could be used in concert with other data platforms
+ 
+#### Data Lake
 
-#### Model hosting
-- Sagemaker
-- Azure ML
-- Databricks
+
+- (Databricks Delta Lake)[https://www.databricks.com/discover/data-lakes/introduction]
+- (Snowflake)[https://www.snowflake.com/en/data-cloud/workloads/data-lake/]
+- (Cloudera)[https://www.cloudera.com/products/sdx/data-lake-service.html]
+- (Azure Data Lake)[https://azure.microsoft.com/en-us/solutions/data-lake/]
+- (Data Lake on AWS)[https://aws.amazon.com/solutions/implementations/data-lake-solution/]
+    - Note that the AWS data lake solution is a conglomeration of other AWS technologies driven by DynamoDB an S3 for storage. 
+
+
+#### Kubernetes
+
+- (GKE)[https://cloud.google.com/kubernetes-engine]
+- (AKS)[https://azure.microsoft.com/en-us/services/kubernetes-service/]
+- (EKS)[https://aws.amazon.com/eks/]
+- (OpenShift)[https://www.redhat.com/en/technologies/cloud-computing/openshift]
+- (Tanzu)[https://tanzu.vmware.com/tanzu]
+
+#### Service Development
+
+- (Quarkus)[https://quarkus.io/]
+- (SpringBoot)[https://spring.io/projects/spring-boot/]
+- (FastAPI (python))[https://fastapi.tiangolo.com/]
+
+#### Messaging
+
+- (Azure Kafka on HDInsight)[https://docs.microsoft.com/en-us/azure/hdinsight/kafka/apache-kafka-introduction]
+- (MSK on AWS)
+
+#### Identity and Security
+
+All of the cloud providers provide identity solutions. In addition there are ope
+- (Okta Customer Identity)[https://www.okta.com/solutions/secure-ciam/]
+- (Keycloak.X) [https://www.keycloak.org/2021/10/keycloak-x-update]
+    - An open source cloud native identity solution that can be used to provide security and identity, particularly in Kubernetes based solutions.
+
+#### Model Hosting
+
+
+- (Azure ML)[https://azure.microsoft.com/en-us/services/machine-learning/]
+- (Sagemaker)[https://aws.amazon.com/pm/sagemaker]
+- (Databricks ML)[https://www.databricks.com/product/machine-learning]
 
 ### Simulating Patient Scenarios
 
