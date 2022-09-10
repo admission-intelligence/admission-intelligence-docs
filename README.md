@@ -130,7 +130,7 @@ The gray boxes in the architecture diagram above are intended to be microservice
 
 - [Quarkus](https://quarkus.io/)
 - [SpringBoot](https://spring.io/projects/spring-boot/)
-- [FastAPI [python]](https://fastapi.tiangolo.com/)
+- [FastAPI (python)](https://fastapi.tiangolo.com/)
 
 #### Messaging
 
