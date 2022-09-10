@@ -18,7 +18,7 @@ of all adult inpatient stays with a primary expected payer of Medicare were pote
 ) and [NIH](https://www.ncbi.nlm.nih.gov/books/NBK559945/)). Studies indicate that the preventable admission 
 problem disproportionately impacts disadvantaged communities and individuals, especially individuals at an economic disadvantage.
 
-A one size fits all approach won't work. The scope of the challenge means tmproving preventable admission rates requires a data driven architecture
+A one size fits all approach won't work. The scope of the challenge means improving preventable admission rates requires a data driven architecture
 that can operate at scale and bring the best decision making and automation tools available to life. 
 
 Under the following guiding architectural requirements:
@@ -37,7 +37,7 @@ Under the following guiding architectural requirements:
     
 * __Data and Models at the Core__
     * Bring models to life. The architecture must enable new models and machine learning techniques must be brought 
-    * Adapt to the data. Decoupled systems and an event driven architecure allow models to evolve and get to production faster and with bigger impact
+    * Adapt to the data. Decoupled systems and an event driven architecture allow models to evolve and get to production faster and with bigger impact
 
 
 #### Hackathon Submission Summary
