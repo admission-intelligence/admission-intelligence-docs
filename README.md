@@ -3,7 +3,7 @@
 *  [Introduction](#Introduction)
     *  [The Challenge](#the-challenge)
     *  [Submission Summary](#submission-summary)
-*  [Reference Architecture](#Reference-Architecture)
+*  [Reference Architecture](#reference-architecture)
 *  [Data Format and Rules](#data-format-and-rules)
 *  [Running the Software](#running-the-software)
 *  [Future Functionality and Next Steps](#future-functionality-and-next-steps)
